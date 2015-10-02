@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServiceTaskModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ServiceJob">
+    <Key>
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Name="JobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TechnicianID" Type="Int32" />
+    <Property Name="ClientID" Type="Int32" />
+    <NavigationProperty Name="Technician" Relationship="Self.FK__ServiceJo__Techn__145C0A3F" FromRole="ServiceJob" ToRole="Technician" />
+  </EntityType>
+  <EntityType Name="Technician">
+    <Key>
+      <PropertyRef Name="TechnicianID" />
+    </Key>
+    <Property Name="TechnicianID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ServiceJobs" Relationship="Self.FK__ServiceJo__Techn__145C0A3F" FromRole="Technician" ToRole="ServiceJob" />
+  </EntityType>
+  <Association Name="FK__ServiceJo__Techn__145C0A3F">
+    <End Role="Technician" Type="Self.Technician" Multiplicity="0..1" />
+    <End Role="ServiceJob" Type="Self.ServiceJob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Technician">
+        <PropertyRef Name="TechnicianID" />
+      </Principal>
+      <Dependent Role="ServiceJob">
+        <PropertyRef Name="TechnicianID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ServiceTaskEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ServiceJobs" EntityType="Self.ServiceJob" />
+    <EntitySet Name="Technicians" EntityType="Self.Technician" />
+    <AssociationSet Name="FK__ServiceJo__Techn__145C0A3F" Association="Self.FK__ServiceJo__Techn__145C0A3F">
+      <End Role="Technician" EntitySet="Technicians" />
+      <End Role="ServiceJob" EntitySet="ServiceJobs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

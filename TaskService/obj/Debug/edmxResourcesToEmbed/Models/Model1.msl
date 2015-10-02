@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ServiceTaskModelStoreContainer" CdmEntityContainer="ServiceTaskEntities">
+    <EntitySetMapping Name="ServiceJobs">
+      <EntityTypeMapping TypeName="ServiceTaskModel.ServiceJob">
+        <MappingFragment StoreEntitySet="ServiceJob">
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="TechnicianID" ColumnName="TechnicianID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Technicians">
+      <EntityTypeMapping TypeName="ServiceTaskModel.Technician">
+        <MappingFragment StoreEntitySet="Technician">
+          <ScalarProperty Name="TechnicianID" ColumnName="TechnicianID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
