@@ -129,6 +129,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705141529218_initial.cs" />
+    <Compile Include="Migrations\201705141529218_initial.Designer.cs">
+      <DependentUpon>201705141529218_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ServiceJob.cs" />
     <Compile Include="Models\TaskContext.cs" />
     <Compile Include="Models\Technician.cs" />
@@ -145,7 +150,11 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705141529218_initial.resx">
+      <DependentUpon>201705141529218_initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

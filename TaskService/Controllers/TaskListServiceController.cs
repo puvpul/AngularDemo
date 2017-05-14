@@ -12,20 +12,22 @@ namespace TaskService.Controllers
     [EnableCors("*","*","*")]
     public class TaskListServiceController : ApiController
     {
-        ServiceTaskRepository _db = new ServiceTaskRepository();
+        //TaskContext ctx = new TaskContext();
+        //TaskRepository _db = new TaskRepository(ctx);
 
         [HttpGet]
         public List<ServiceJob> GetAllJobs()
         {
-            return _db.GetAll();
+            List<ServiceJob> svj = null;
+            return svj;
         }
 
 
-        [HttpPost]
-        public void UpdateServiceJob(ServiceJob newJob)
-        {
-            _db.Update(newJob);
-        }
+        //[HttpPost]
+        //public void UpdateServiceJob(ServiceJob newJob)
+        //{
+        //    _db.Update(newJob);
+        //}
     }
 
 

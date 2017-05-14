@@ -7,7 +7,7 @@ namespace TaskService.Models
 {
     public class ServiceJob
     {
-        public int JobID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public Nullable<System.DateTime> StartDate { get; set; }
         public Nullable<System.DateTime> EndDate { get; set; }

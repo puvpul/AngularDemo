@@ -1,3 +1,6 @@
+using TaskService.Models;
+using TaskService.Repository;
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(TaskService.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(TaskService.App_Start.NinjectWebCommon), "Stop")]
 
@@ -10,6 +13,8 @@ namespace TaskService.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using System.Web.Http;
+    using Ninject.Web.WebApi;
 
     public static class NinjectWebCommon 
     {
@@ -46,6 +51,7 @@ namespace TaskService.App_Start
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
                 RegisterServices(kernel);
+                GlobalConfiguration.Configuration.DependencyResolver = new NinjectDependencyResolver(kernel);
                 return kernel;
             }
             catch
@@ -61,6 +67,7 @@ namespace TaskService.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<ITaskRepository>().To<TaskRepository>();
         }        
     }
 }

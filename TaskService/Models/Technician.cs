@@ -7,7 +7,7 @@ namespace TaskService.Models
 {
     public class Technician
     {
-        public int TechnicianID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
 
         
