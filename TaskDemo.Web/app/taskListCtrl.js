@@ -2,7 +2,7 @@
 function ($scope, dataService, apiValues) {
 
     $scope.TaskList = [];
-    $scope.Name = "Fariz";
+  
 
     dataService.getTaskList().then(function (data) {
             $scope.TaskList = data;

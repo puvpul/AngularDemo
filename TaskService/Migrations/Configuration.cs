@@ -34,7 +34,7 @@ namespace TaskService.Migrations
             },
             new ServiceJob()
             {
-                Name = "Pride and Prejudice",
+                Name = "Pride and Prejudice 2",
                 StartDate = DateTime.Parse("2010-09-01"),
                 EndDate = DateTime.Parse("2012-09-01"),
                 Status = "Done",
@@ -43,21 +43,21 @@ namespace TaskService.Migrations
             },
             new ServiceJob()
             {
-                Name = "Pride and Prejudice",
+                Name = "Pride and Prejudice 3",
                 StartDate = DateTime.Parse("2015-09-01"),
                 EndDate = (DateTime?)null,
                 Status = "In Progress",
                 Comment = "Comedy of manners",
-                ClientID = 1
+                ClientID = 2
             },
             new ServiceJob()
             {
-                Name = "Pride and Prejudice",
+                Name = "Pride and Prejudice 4",
                 StartDate = DateTime.Parse("2010-09-01"),
                 EndDate = (DateTime?)null,
-                Status = "Done",
+                Status = "In Progress",
                 Comment = "Comedy of manners",
-                ClientID = 1
+                ClientID = 3
             }
     );
         }

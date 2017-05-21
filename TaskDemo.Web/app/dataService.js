@@ -10,14 +10,13 @@
               // Successful
               angular.copy(result.data, _allTasks);
               console.log(_allTasks);
-              alert("hey");
-              _isInit = true;
+              
               deferred.resolve();
           },
           function () {
               // Error
               deferred.reject();
-              alert("hey");
+              
           });
 
         return deferred.promise;

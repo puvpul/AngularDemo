@@ -6,20 +6,24 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using TaskService.Models;
+using TaskService.Repository;
 
 namespace TaskService.Controllers
 {
     [EnableCors("*","*","*")]
     public class TaskListServiceController : ApiController
     {
-        //TaskContext ctx = new TaskContext();
-        //TaskRepository _db = new TaskRepository(ctx);
+        ITaskRepository _taskRepository;
 
+        public TaskListServiceController(ITaskRepository taskRepo)
+        {
+            _taskRepository = taskRepo;
+        }
         [HttpGet]
         public List<ServiceJob> GetAllJobs()
         {
-            List<ServiceJob> svj = null;
-            return svj;
+           
+            return _taskRepository.GetJobs().ToList();
         }
 
 
