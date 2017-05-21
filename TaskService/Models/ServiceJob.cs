@@ -13,7 +13,7 @@ namespace TaskService.Models
         public Nullable<System.DateTime> EndDate { get; set; }
         public string Status { get; set; }
         public string Comment { get; set; }
-        public Nullable<int> TechnicianID { get; set; }
+        public Nullable<int> TechnicianId { get; set; }
         public Nullable<int> ClientID { get; set; }
 
         //public virtual Technician Technician { get; set; }

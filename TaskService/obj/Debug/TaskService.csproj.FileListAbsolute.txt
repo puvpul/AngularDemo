@@ -47,7 +47,6 @@ C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\bin\Newtonsoft.Json.xml
 C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\bin\System.Net.Http.Formatting.xml
 C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\bin\System.Web.Http.xml
 C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\bin\System.Web.Http.WebHost.xml
-C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\obj\Debug\TaskService.csprojResolveAssemblyReference.cache
 C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\obj\Debug\TaskService.dll
 C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\obj\Debug\TaskService.pdb
 C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\bin\Microsoft.Web.Infrastructure.dll
@@ -58,5 +57,6 @@ C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\bin\WebActivatorEx.dll
 C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\bin\Ninject.xml
 C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\bin\Ninject.Web.Common.xml
 C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\bin\Ninject.Web.WebApi.xml
+C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\obj\Debug\TaskService.csprojResolveAssemblyReference.cache
 C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\obj\Debug\TaskService.Migrations.initial.resources
 C:\Projects\Angular 1\Anugar1TaskDemo\TaskService\obj\Debug\TaskService.csproj.GenerateResource.Cache

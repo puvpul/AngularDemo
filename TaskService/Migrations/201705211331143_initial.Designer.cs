@@ -13,7 +13,7 @@ namespace TaskService.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201705141529218_initial"; }
+            get { return "201705211331143_initial"; }
         }
         
         string IMigrationMetadata.Source

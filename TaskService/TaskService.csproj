@@ -129,9 +129,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705141529218_initial.cs" />
-    <Compile Include="Migrations\201705141529218_initial.Designer.cs">
-      <DependentUpon>201705141529218_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201705211331143_initial.cs" />
+    <Compile Include="Migrations\201705211331143_initial.Designer.cs">
+      <DependentUpon>201705211331143_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ServiceJob.cs" />
@@ -151,12 +151,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705141529218_initial.resx">
-      <DependentUpon>201705141529218_initial.cs</DependentUpon>
-    </EmbeddedResource>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <EmbeddedResource Include="Migrations\201705211331143_initial.resx">
+      <DependentUpon>201705211331143_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

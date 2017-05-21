@@ -13,11 +13,33 @@
     <script src="app/taskListCtrl.js"></script>
 </head>
 <body ng-app="app">
+
+<div class="row greyDiv" ng-controller="taskListCtrl">
     <div class="header"></div>
-    <div class="row greyDiv" ng-controller="taskListCtrl">
-        <div class="" ng-repeat="task in TaskList">
-            {{task.name}}
-        </div>
-    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <td>
+
+            </td>
+            <td>Name</td>
+            <td>Start Date</td>
+            <td>End Date</td>
+            <td>Status</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="t in TaskList">
+            <td>
+                {{t.name}}
+            </td>
+            <td>{{ task.startDate }}</td>
+            <td>{{ task.endDate }}</td>
+            <td>{{ task.status}}</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

@@ -20,10 +20,10 @@ namespace TaskService.Models
         {
             return db.ServiceJobs;
         }
-
+        
         public IQueryable<ServiceJob> GetJobsByTechnician(int technicianId)
         {
-            return db.ServiceJobs.Where(p => p.TechnicianID == technicianId);
+            return db.ServiceJobs.Where(p => p.TechnicianId == technicianId);
         }
     }
 }

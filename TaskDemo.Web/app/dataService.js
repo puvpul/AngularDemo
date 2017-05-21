@@ -7,15 +7,12 @@
 
         $http.get("http://localhost:3560/api/TaskListService")
           .then(function (result) {
-              // Successful
-              angular.copy(result.data, _allTasks);
-              console.log(_allTasks);
-              
-              deferred.resolve();
+              deferred.resolve(result.data);
           },
-          function () {
+          function (error) {
               // Error
-              deferred.reject();
+              deferred.rejecterror
+              console.log(error);
               
           });
 
