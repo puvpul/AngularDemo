@@ -17,9 +17,9 @@ namespace TaskService.Migrations
         protected override void Seed(TaskService.Models.TaskContext context)
         {
             context.Technicians.AddOrUpdate(x=>x.Id,
-               new Technician() { Name = "Wakil Hasan"},
-               new Technician() { Name = "Fariz Hasan"},
-               new Technician() { Name = "Jane Austen"});
+               new Technician() { Name = "Wakil Hasan", ImageUrl = "image(1).jpg"},
+               new Technician() { Name = "Fariz Hasan", ImageUrl = "image(2).jpg" },
+               new Technician() { Name = "Jane Austen", ImageUrl = "image(3).jpg" });
 
             context.ServiceJobs.AddOrUpdate(x => x.Id,
             new ServiceJob()
