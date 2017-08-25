@@ -11,7 +11,7 @@ namespace TaskService.Models
     {
         public TaskContext():base("TaskConnection")
         {
-            //Database.SetInitializer<TaskContext>(new DropCreateDatabaseAlways<TaskContext>());
+            Database.SetInitializer<TaskContext>(new DropCreateDatabaseAlways<TaskContext>());
             //Database.SetInitializer(new MigrateDatabaseToLatestVersion<TaskContext, Migrations.Configuration>("TaskConnection"));
         }
 
